@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: white; -webkit-print-color-adjust: exact; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  /* Force print to hide scrollbars and expand content */
+  html, body { height: auto; overflow: visible; }
+  /* Ensure preview container takes full A4 height */
+  .picking-list-container { min-height: 296mm !important; height: 296mm !important; }
+  
+  /* Remove input borders when printing */
+  input { border-bottom: none !important; }
+}
